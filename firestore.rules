@@ -1,0 +1,87 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function userFields() {
+      return [
+        'fullName',
+        'email',
+        'phone',
+        'idType',
+        'maskedIdNumber',
+        'country',
+        'trustedDeviceName',
+        'joinedAt',
+        'riskScore',
+        'verificationFactors',
+        'createdAt',
+        'updatedAt'
+      ];
+    }
+
+    function transactionFields() {
+      return [
+        'title',
+        'counterparty',
+        'amount',
+        'currency',
+        'direction',
+        'status',
+        'category',
+        'occurredAt'
+      ];
+    }
+
+    function activityFields() {
+      return [
+        'title',
+        'subtitle',
+        'iconKey',
+        'occurredAt',
+        'isCritical'
+      ];
+    }
+
+    match /users/{uid} {
+      allow read: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(userFields())
+        && request.resource.data.email == request.auth.token.email;
+      allow delete: if false;
+
+      match /wallets/{walletId} {
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid)
+          && walletId == 'main'
+          && request.resource.data.keys().hasOnly([
+            'balance',
+            'currency',
+            'updatedAt'
+          ]);
+        allow update, delete: if false;
+      }
+
+      match /transactions/{transactionId} {
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(transactionFields());
+        allow update, delete: if false;
+      }
+
+      match /activity/{activityId} {
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(activityFields());
+        allow update, delete: if false;
+      }
+    }
+  }
+}
