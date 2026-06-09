@@ -9,14 +9,31 @@ class HistoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Transaction History'),
       ),
-      body: const Center(
-        child: Text(
-          'Transaction History Feature - El Hassen',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: const [
+          Card(
+            child: ListTile(
+              leading: Icon(Icons.swap_horiz),
+              title: Text('Transfer to ACC12345'),
+              subtitle: Text('RM 100.00 • Completed'),
+            ),
           ),
-        ),
+          Card(
+            child: ListTile(
+              leading: Icon(Icons.payment),
+              title: Text('QR Payment'),
+              subtitle: Text('RM 25.00 • Completed'),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(Icons.account_balance_wallet),
+              title: Text('Wallet Top Up'),
+              subtitle: Text('RM 50.00 • Pending'),
+            ),
+          ),
+        ],
       ),
     );
   }
