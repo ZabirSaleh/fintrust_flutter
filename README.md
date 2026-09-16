@@ -34,7 +34,7 @@ firebase deploy --only firestore
 
 Enable **Authentication > Sign-in method > Email/Password** in the Firebase console before testing real registration/login. `FintrustBackendFactory` initializes Firebase automatically from the generated options.
 
-## Firestore Shape
+## Firestore Shape 9
 
 ```text
 users/{uid}
