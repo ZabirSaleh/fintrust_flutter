@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Fintrust Mobile</string>
+	<string>FINTRUST</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>fintrust_mobile</string>
+	<string>FINTRUST</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -45,5 +45,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>FINTRUST uses the camera to scan QR payment codes.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>FINTRUST uses your location for GPS-based account protection.</string>
+	<key>NSUserNotificationUsageDescription</key>
+	<string>FINTRUST sends secure alerts for transfers, QR payments, and support updates.</string>
 </dict>
 </plist>

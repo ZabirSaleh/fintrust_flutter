@@ -1,0 +1,35 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "runtime": "nodejs20"
+    }
+  ],
+  "flutter": {
+    "platforms": {
+      "android": {
+        "buildConfigurations": {
+          ".": {
+            "projectId": "myr-ewallet",
+            "appId": "1:698467505908:android:efb99644ecb042a40db0a1",
+            "fileOutput": "android/app/google-services.json"
+          }
+        }
+      }
+    },
+    "dart": {
+      "lib/firebase_options.dart": {
+        "projectId": "myr-ewallet",
+        "configurations": {
+          "android": "1:698467505908:android:efb99644ecb042a40db0a1",
+          "ios": "1:698467505908:ios:25094d4ebf9d397a0db0a1"
+        }
+      }
+    }
+  }
+}

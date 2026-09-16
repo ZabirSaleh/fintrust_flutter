@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "698467505908",
+    "project_id": "myr-ewallet",
+    "storage_bucket": "myr-ewallet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698467505908:android:53ad5922d7e634820db0a1",
+        "android_client_info": {
+          "package_name": "com.example.myr_ewallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB2BmSQ4ClUxk95jWdJI1LA41tcEfH9EA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698467505908:android:efb99644ecb042a40db0a1",
+        "android_client_info": {
+          "package_name": "com.fintrust.fintrust"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB2BmSQ4ClUxk95jWdJI1LA41tcEfH9EA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
