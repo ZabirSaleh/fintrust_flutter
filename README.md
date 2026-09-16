@@ -2,6 +2,8 @@
 
 FINTRUST is a Flutter fintech mobile app scaffold for Android and iOS. Sprint 1 includes authentication, registration, profile, logout, password reset, zero-trust style MFA checks, Firebase-ready persistence, transactions, activity, and QR Pay scanning.
 
+See [FINTRUST_End_to_End_Description.md](FINTRUST_End_to_End_Description.md) for the complete architecture, workflows, Firebase setup, blockchain anchoring, reports, testing guide, and deployment notes.
+
 ## Sprint 1 Scope
 
 - Register with email, phone, ID document, OTP, and authenticator code fields.
