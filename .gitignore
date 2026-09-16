@@ -43,3 +43,35 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# FINTRUST blockchain deployment secrets/build output
+/blockchain/.env
+/blockchain/node_modules/
+/blockchain/artifacts/
+/blockchain/cache/
+/functions/.env
+/functions/.env.*
+
+# Local credentials and generated dependencies
+**/node_modules/
+**/.env
+**/.env.*
+!**/.env.example
+*.jks
+*.keystore
+*.p12
+*.pem
+**/key.properties
+**/*service-account*.json
+**/*firebase-adminsdk*.json
+/android/build/
+.firebase/
+
+# Local reports, portfolio material, and temporary files
+/.vscode/
+/Zabir_Saleh_*
+/portfolio-site/
+/fintrust_*_report.pdf
+/fintrust_*_report.csv
+/tmp/
+/tmp_*
